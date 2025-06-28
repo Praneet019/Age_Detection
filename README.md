@@ -1,51 +1,40 @@
-# Age Detection Using Deep Learning
+# Age Detection Project
 
-This project fine-tunes a pre-trained CNN model (MobileNetV2) to predict a person's age using facial images from the UTKFace dataset.
+This project trains a CNN model to predict human age in 20-year bins using the UTKFace dataset.
 
-Dataset:
+Files included:
 
--Source: UTKFace
+training_model.ipynb : Jupyter Notebook with complete training and evaluation code.
 
--Path: C:/Users/HP/age_detection/dataset
+final_age_model_4bins.h5 : Saved trained model.
 
--Data Format: Image filenames contain age, gender, and race (e.g., 25_1_0.jpg)
+requirements.txt : Python packages required.
 
-Model Details:
+Dataset used:
+Combined images from these folders:
 
--Base Model: MobileNetV2 (pre-trained on ImageNet)
+crop_part1
 
--Input Shape: 100x100x3
+UTKFace
 
--Custom Layers: Global Average Pooling → Dense → Output
+utkface_aligned_cropped/crop_part1
 
--Loss Function: Mean Squared Error
+utkface_aligned_cropped/UTKFace
 
--Metric: Mean Absolute Error (MAE)
+Model details:
 
-Results:
+Model: EfficientNetB0 pretrained on ImageNet
 
--Final Validation MAE: 8.62 years
+Image size: 96x96
 
--Evaluation: Age predictions grouped into age brackets (0-9, 10-19, ..., 70+)
+Classes: 20 age bins
 
--Classification Accuracy (on grouped ages): 48 percent
+Metrics: Accuracy, confusion matrix, precision, recall
 
--Confusion Matrix and Classification Report generated and included
+Usage:
 
-Requirements:
+Install required packages from requirements.txt
 
--Install dependencies with:
+Run training_model.ipynb in Jupyter Notebook
 
--pip install -r requirements.txt
-
-Model File:
-
--Saved model: age_model.h5
-
-How to Run:
-
--Open age_detection.ipynb in Jupyter Notebook
-
--Run all cells to train the model or load the existing saved model
-
--Outputs include MAE score, confusion matrix, and classification report
+Requirements are listed in requirements.txt
