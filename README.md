@@ -2,7 +2,7 @@
 
 This project trains a CNN model to predict human age in 20-year bins using the UTKFace dataset.
 
-Files included:
+## Files included:
 
 training_model.ipynb : Jupyter Notebook with complete training and evaluation code.
 
@@ -10,18 +10,9 @@ final_age_model_4bins.h5 : Saved trained model.
 
 requirements.txt : Python packages required.
 
-Dataset used:
-Combined images from these folders:
+## Dataset: Download an extract the dataset from here: https://www.kaggle.com/datasets/jangedoo/utkface-new
 
-crop_part1
-
-UTKFace
-
-utkface_aligned_cropped/crop_part1
-
-utkface_aligned_cropped/UTKFace
-
-Model details:
+## Model details:
 
 Model: EfficientNetB0 pretrained on ImageNet
 
